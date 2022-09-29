@@ -1,0 +1,382 @@
+{
+  "Buildings": {
+    "123456": {
+      "lat": 37.91865766,
+      "lon": -122.3324738,
+      "county": "Contra Costa",
+      "state": "CA",
+      "footprint": [[37.918772870823744,-122.33269565337069],[37.91862025811308,-122.3327544482211],[37.91865167840292,-122.3322252945676],[37.918772870823744,-122.33269565337069]],
+      "fparea": 779.22,
+      "nfloors": [[1, 2],[0.94, 0.06]],
+      "yearbuilt": ["normal", 1972, 11],
+      "strtype": [["C", "S"],[0.96, 0.04]],
+      "occupancy": [["EDU2", "COM4", "GOV1"],[0.73, 0.16, 0.11]],
+      "h0": ["normal", 0.6, 0.2],
+      "h1": ["normal", 6.1, 1.1],
+      "h2": ["normal", 7.7, 0.9],
+      "roofpitch": ["normal", 0.2, 0.03],
+      "rooftype": [["GBL", "HIP", "OTH"],[0.77, 0.18, 0.05]],
+      "roofcover": [["SHN", "TIL", "OTH"],[0.69, 0.22, 0.09]],
+      "foundation": [["SOW", "BAS", "CRS"],[0.64, 0.31, 0.05]],
+      "garage": [["NON", "DET"],[0.98, 0.02]],
+      "lulc": "URBAN",
+      "terrain": 0.15,
+      "winarea": ["normal", 0.17, 0.04],
+      "splitlevel": [[true, false], [0.09, 0.91]],
+      "replacecost": ["lognormal", 1100, 52],
+      "population": ["lognormal", 20, 4],
+      "soiltype": "C",
+      "elevation": 9.1,
+      "floodzone": "D",
+      "windzone": "I",
+      "dswi": 138.0,
+      "dswii": 148.0,
+      "dswiii": 158.0,
+      "dswiv": 168.0,
+      "avgjantemp": 8.0,
+      "analysislevel": 2,
+      "essential": "NONE",
+      "history": {
+        "lat": {
+          "value": 37.91865766,
+          "source": "OSM Footprint",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FootprintHandler",
+            "module_version": "1.0.0"
+          }
+        },
+        "lon": {
+          "value": -122.3324738,
+          "source": "OSM Footprint",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FootprintHandler",
+            "module_version": "1.0.0"
+          }
+        },
+        "county": {
+          "value": "Contra Costa",
+          "source": "Obtained from OSM Nominatim API",
+          "date": "9/14/2022"
+        },
+        "state": {
+          "value": "CA",
+          "source": "Obtained from OSM Nominatim API",
+          "date": "9/14/2022"
+        },
+        "footprint": {
+          "value": [[37.918772870823744,-122.33269565337069],[37.91862025811308,-122.3327544482211],[37.91865167840292,-122.3322252945676],[37.918772870823744,-122.33269565337069]],
+          "source": "Microsoft Building Footprint Databse",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FootprintHandler",
+            "module_version": "1.0.0"
+          }
+        },
+        "fparea": {
+          "value": 779.22,
+          "source": "Calculated from OSM Footprint",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FootprintHandler",
+            "module_version": "1.0.0"
+          }
+        },
+        "nfloors": {
+          "value": [[1, 2],[0.94, 0.06]],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "NFloorDetector",
+            "module_version": "1.1.0"
+          }
+        },
+        "yearbuilt": [
+          {
+            "value": ["normal", 1972, 11],
+            "source": "Inferred from Google Street View image using BRAILS",
+            "date": "9/14/2022",
+            "provenance": {
+              "ingestion": "BRAILS",
+              "version": "2.6.1",
+              "module": "YearBuiltClassifier",
+              "module_version": "0.1.2"
+            }
+          },
+          {
+            "value": ["normal", 1988, 11],
+            "source": "Inferred from Google Street View image using BRAILS",
+            "date": "8/11/2022",
+            "provenance": {
+              "ingestion": "BRAILS",
+              "version": "2.4.0",
+              "module": "YearBuiltClassifier",
+              "module_version": "0.1.0"
+            }
+          }
+        ],     
+        "strtype": {
+          "value": [["C", "S"],[0.96, 0.04]],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "StructureTypeClassifier",
+            "module_version": "0.0.1"
+          }
+        },
+        "occupancy": {
+          "value": [["EDU2", "COM4", "GOV1"],[0.73, 0.16, 0.11]],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "OccupancyClassifier",
+            "module_version": "0.9.1"
+          }
+        },
+        "h0": {
+          "value": ["normal", 0.6, 0.2],
+          "source": "Inferred from Google Street View image and OSM footprint using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FacadeParser",
+            "module_version": "1.0.1"
+          }
+        },
+        "h1": {
+          "value": ["normal", 6.1, 1.1],
+          "source": "Inferred from Google Street View image and OSM footprint using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FacadeParser",
+            "module_version": "1.0.1"
+          }
+        },
+        "h2": {
+          "value": ["normal", 7.7, 0.9],
+          "source": "Inferred from Google Street View image and OSM footprint using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FacadeParser",
+            "module_version": "1.0.1"
+          }
+        },
+        "roofpitch": {
+          "value": ["normal", 0.2, 0.03],
+          "source": "Inferred from Google Street View image and OSM footprint using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FacadeParser",
+            "module_version": "1.0.1"
+          }
+        },
+        "rooftype": [
+          {
+	    "value": [["GBL", "HIP", "OTH"],[0.77, 0.18, 0.05]],
+            "source": "Inferred from Google satellite image using BRAILS",
+            "date": "9/14/2022",
+            "provenance": {
+              "ingestion": "BRAILS",
+              "version": "2.6.1",
+              "module": "RoofTypeClassifier",
+              "module_version": "1.6.2"
+            }
+          },
+          {
+            "value": [["HIP", "GBL", "OTH"],[0.61, 0.23, 0.16]],
+            "source": "Inferred from Google satellite image using BRAILS",
+            "date": "7/18/2022",
+            "provenance": {
+              "ingestion": "BRAILS",
+              "version": "2.2.0",
+              "module": "RoofTypeClassifier",
+              "module_version": "1.5.0"
+            }
+          }
+        ], 
+        "roofcover": {
+          "value": [["SHN", "TIL", "OTH"],[0.69, 0.22, 0.09]],
+          "source": "Inferred from Google satellite image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "RoofCoverClassifier",
+            "module_version": "0.2.1"
+          }
+        },        
+        "foundation": {
+          "value": [["SOW", "BAS", "CRS"],[0.64, 0.31, 0.05]],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FoundationTypeClassifier",
+            "module_version": "0.1.2"
+          }
+        },
+        "garage": {
+          "value": [["NON", "DET"],[0.98, 0.02]],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "GarageDetector",
+            "module_version": "1.0.0"
+          }
+        },
+        "lulc": {
+          "value": "URBAN",
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "LandCoverParser",
+            "module_version": "0.1.0"
+          }
+        },
+        "terrain": {
+          "value": 0.15,
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "TerrainAnalyzer",
+            "module_version": "0.0.1"
+          }
+        },
+        "winarea": {
+          "value": ["normal", 0.17, 0.04],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "FacadeParser",
+            "module_version": "1.0.1"
+          }
+        },
+        "splitlevel": {
+          "value": [[true, false], [0.09, 0.91]],
+          "source": "Inferred from Google Street View image using BRAILS",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "StoryLayoutClassifier",
+            "module_version": "0.0.1"
+          }
+        },
+        "replacecost": {
+          "value": ["lognormal", 1100, 52],
+          "source": "Footprint Area x RSMeans Data",
+          "date": "9/14/2022"
+        },
+        "population": {
+          "value": ["lognormal", 20, 4],
+          "source": "Inferred from Occupancy",
+          "date": " 9/14/2022"
+        },
+        "soiltype": {
+          "value": "C",
+          "source": "Hybrid geology-slope approach as described by Parker et al. 2017",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "SoilClassEstimator",
+            "module_version": "0.0.2"
+          }
+        },
+        "elevation": {
+          "value": 9.1,
+          "source": "Google Elevations API query",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "ElevationParser",
+            "module_version": "0.5.0"
+          }
+        },
+        "floodzone": {
+          "value": "D",
+          "source": "FEMA Flood Map API 3.0.0",
+          "date": "9/14/2022"
+        },
+        "windzone": {
+          "value": "I",
+          "source": "MHI HUD Maps",
+          "date": "9/14/2022"
+        },
+        "dswi": {
+          "value": 138.0,
+          "source": "ATC Hazards by Location Public API",
+          "date": "9/14/2022"
+        },
+        "dswii": {
+          "value": 148.0,
+          "source": "ATC Hazards by Location Public API",
+          "date": "9/14/2022"
+        },
+        "dswiii": {
+          "value": 158.0,
+          "source": "ATC Hazards by Location Public API",
+          "date": "9/14/2022"
+        },
+        "dswiv": {
+          "value": 168.0,
+          "source": "ATC Hazards by Location Public API",
+          "date": "9/14/2022"
+        },
+        "avgjantemp": {
+          "value": 8.0,
+          "source": "OpenWeather API 3.0",
+          "date": "9/14/2022",
+          "provenance": {
+            "ingestion": "BRAILS",
+            "version": "2.6.1",
+            "module": "WeatherAnalyzer",
+            "module_version": "0.0.2"
+          }
+        },
+        "analysislevel": {
+          "value": 2,
+          "source": "Determined based on occupancy and Nfloors",
+          "date": "9/14/2022"
+        },
+        "essential": {
+          "value": "NONE",
+          "source": "OSM Data",
+          "date": "9/14/2022"
+        }
+      }
+    }
+  }
+}
