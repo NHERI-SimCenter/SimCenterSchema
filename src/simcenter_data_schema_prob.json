@@ -1,0 +1,646 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://simcenter.designsafe-ci.org/",
+  "title": "SimCenter Civil Infrastructure Database",
+  "description": "Schema for SimCenter Database",
+  "type": "object",
+  "properties": {
+    "buildings": {
+      "description": "Building Database",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Building attributes",
+          "type": "object",
+          "properties": {
+            "lat": {
+              "description": "Latitude in decimal degrees",
+              "type": "number"
+            },
+            "lon": {
+              "description": "Longitude in decimal degrees",
+              "type": "number"
+            },
+            "county": {
+              "description": "County",
+              "type": "string"
+            },
+            "state": {
+              "description": "State",
+              "type": "string"
+            },
+            "footprint": {
+              "description": "Building footprint polygon as latitude/longitude pairs",
+              "type": "array"
+            },
+            "fparea": {
+              "description": "Area of building footprint determined from footprint polygon in m2",
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "nfloors": {
+              "description": "Number of floors",
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer",
+                      "minimum": 1
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "yearbuilt": {
+              "description": "Year of construction of the building",
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "structtype": {
+              "description": "Basic structure type as in Concrete, Steel, Wood, Masonry, or Mobile Home",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "C",
+                    "S",
+                    "W",
+                    "M",
+                    "MH"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "C",
+                          "S",
+                          "W",
+                          "M",
+                          "MH"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "occupancy": {
+              "description": "HAZUS building occupancy class",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "RES1",
+                    "RES2",
+                    "RES3",
+                    "RES4",
+                    "RES5",
+                    "RES6",
+                    "COM1",
+                    "COM2",
+                    "COM3",
+                    "COM4",
+                    "COM5",
+                    "COM6",
+                    "COM7",
+                    "COM8",
+                    "COM9",
+                    "COM10",
+                    "IND1",
+                    "IND2",
+                    "IND3",
+                    "IND4",
+                    "IND5",
+                    "IND6",
+                    "AGR1",
+                    "REL1",
+                    "IND2",
+                    "GOV1",
+                    "GOV2",
+                    "EDU1",
+                    "EDU2"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "RES1",
+                          "RES2",
+                          "RES3",
+                          "RES4",
+                          "RES5",
+                          "RES6",
+                          "COM1",
+                          "COM2",
+                          "COM3",
+                          "COM4",
+                          "COM5",
+                          "COM6",
+                          "COM7",
+                          "COM8",
+                          "COM9",
+                          "COM10",
+                          "IND1",
+                          "IND2",
+                          "IND3",
+                          "IND4",
+                          "IND5",
+                          "IND6",
+                          "AGR1",
+                          "REL1",
+                          "IND2",
+                          "GOV1",
+                          "GOV2",
+                          "EDU1",
+                          "EDU2"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "h0": {
+              "description": "First floor height measured from ground surface in m",
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "h1": {
+              "description": "Roof eave height measured from ground surface in m",
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "h2": {
+              "description": "Roof peak height measured from ground surface in m",
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "roofpitch": {
+              "description": "Roof pitch as a ratio of roof rise divided by roof run",
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "rooftype": {
+              "description": "Roof type as in flat, gable, hip, mansard, gambrel, shed, or other",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "FLT",
+                    "GBL",
+                    "HIP",
+                    "MAN",
+                    "GMB",
+                    "SHD",
+                    "OTH"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "FLT",
+                          "GBL",
+                          "HIP",
+                          "MAN",
+                          "GMB",
+                          "SHD",
+                          "OTH"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "roofcover": {
+              "description": "Roof cover type as in built-up roof, shingles, tiles, single-ply membrane, or other",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "BUR",
+                    "SHN",
+                    "TIL",
+                    "SPM",
+                    "OTH"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "BUR",
+                          "SHN",
+                          "TIL",
+                          "SPM",
+                          "OTH"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "foundation": {
+              "description": "Foundation type as in piles, piers, solid wall, basement, crawlspace, fill, or slab-on-grade",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "PIL",
+                    "PIR",
+                    "SOW",
+                    "BAS",
+                    "CRS",
+                    "FIL",
+                    "SOG"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "PIL",
+                          "PIR",
+                          "SOW",
+                          "BAS",
+                          "CRS",
+                          "FIL",
+                          "SOG"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "garage": {
+              "description": "Garage type as in attached, detached, carport, or none",
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "ATH",
+                    "DET",
+                    "CPT",
+                    "NON"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "enum": [
+                          "ATH",
+                          "DET",
+                          "CPT",
+                          "NON"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "lulc": {
+              "description": "Land use/land cover data",
+              "type": "string"
+            },
+            "terrain": {
+              "description": "Terrain roughness as determined from land use/land cover data",
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "winarea": {
+              "description": "Window area as ratio of the entire facade area",
+              "anyof": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "splitlevel": {
+              "description": "Identifier that marks if the building is split level",
+              "anyof": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "replacecost": {
+              "description": "Replacement cost of the building in thousand dollars",
+              "anyof": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "population": {
+              "description": "Number of inhabitants of the building",
+              "anyof": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ]
+                }
+              ]
+            },
+            "soiltype": {
+              "description": "ASCE 7 site class of the building site",
+              "type": "string",
+              "enum": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+              ]
+            },
+            "elevation": {
+              "description": "Ground elevation of the building site in m",
+              "type": "number"
+            },
+            "floodzone": {
+              "description": "FEMA flood zone of the building",
+              "type": "string"
+            },
+            "windzone": {
+              "description": "MHI HUD wind zone of the building",
+              "type": "string",
+              "enum": [
+                "I",
+                "II",
+                "III"
+              ]
+            },
+            "dswi": {
+              "description": "ASCE 7 Risk Category I wind speed in km/h",
+              "type": "number",
+              "minimum": 0
+            },
+            "dswii": {
+              "description": "ASCE 7 Risk Category II wind speed in km/h",
+              "type": "number",
+              "minimum": 0
+            },
+            "dswiii": {
+              "description": "ASCE 7 Risk Category III wind speed in km/h",
+              "type": "number",
+              "minimum": 0
+            },
+            "dswiv": {
+              "description": "ASCE 7 Risk Category IV wind speed in km/h",
+              "type": "number",
+              "minimum": 0
+            },
+            "avgjantemp": {
+              "description": "Average January Temperature in Celcius",
+              "type": "number"
+            },
+            "analysislevel": {
+              "description": "Level of model sophistication required for analysis of the building",
+              "type": "integer",
+              "enum": [
+                1,
+                2,
+                3
+              ]
+            },
+            "essentialclass": {
+              "description": "Identifier for essential class of the building as in Police Station, Fire Station, Emergency Operation Center, Hospital, School, or None",
+              "type": "string",
+              "enum": [
+                "PS",
+                "FS",
+                "EOC",
+                "HO",
+                "SCH",
+                "NONE"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
