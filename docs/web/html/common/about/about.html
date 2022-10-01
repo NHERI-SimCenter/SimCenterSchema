@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>1. About &mdash; BRAILS 2.0.0 documentation</title>
+  <title>About &mdash; SimCenter Schema 0.1.0 documentation</title>
   
 
   
@@ -48,8 +48,6 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Acknowledgements" href="acknowledgements.html" />
-    <link rel="prev" title="Building Recognition using AI at Large-Scale (BRAILS)" href="../../index.html" />
 <script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
@@ -75,7 +73,7 @@
   <a href="../../index.html">
 
 
-  <img src="../../_static/SimCenter_BRAILS_logo_solo.png" class="logo" alt="Logo"/>
+  <img src="../../_static/SimCenterSchema_logo_solo.png" class="logo" alt="Logo"/>
 </a>
 
 
@@ -103,31 +101,11 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">2. Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">3. Copyright and License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cite.html">4. How to Cite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">5. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="abbreviations.html">6. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="releasenotes.html">7. Release Notes</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">About</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../user_manual/installation.html">1. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_manual/userGuide.html">2. User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_manual/troubleshooting.html">3. Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_manual/examples.html">4. Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user_manual/bugs.html">5. Bugs &amp; Feature Requests</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Technical Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../technical_manual/theory.html">1. Theory and Implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../technical_manual/vnv.html">2. Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../technical_manual/understand.html">3. Generalization</a></li>
-</ul>
-
+</div>
             
           
         </div>
@@ -141,7 +119,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">BRAILS</a>
+          <a href="../../index.html">SimCenter Schema</a>
         
       </nav>
 
@@ -174,7 +152,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>About</li>
+      <li>About</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -194,13 +172,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="about">
-<span id="lblabout"></span><h1><span class="section-number">1. </span>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
-<p>BRAILS is an open-source software framework hosted on the <a class="reference external" href="https://github.com/NHERI-SimCenter/BRAILS">BRAILS Github page</a>, and released under the <strong>2-Clause BSD License</strong> (see <a class="reference internal" href="license.html#lbllicense"><span class="std std-ref">Copyright and License</span></a> ). The primary objective of BRAILS is to provide an easy-to-use programming interface for obtaining regional-scale building inventories from the publicly-available image, polygon, and other property data. BRAILS’s capabilities, however, are not limited to image-based inventory generation for buildings. BRAILS also contains simple automated utilities for image recognition tasks, which enable training custom image classification, object detection, and semantic segmentation in a few lines of code.</p>
-<p>For obtaining inventory information at a regional-scale, BRAILS software framework provides an end-to-end pipeline. Once the user defines the region for which the inventory information is required, the pipeline runs an array of scripts to download the location/footprint information and image data and predict the requested attributes for all buildings within the defined region. All pipeline components, including the pre-trained machine learning models predicting building attributes, are fully customizable. This permits creating custom pipelines using BRAILS tools as well as further training and testing of the machine learning models included with BRAILS. This documentation contains several <span class="xref std std-ref">lbl-examples:</span> demonstrating the use of the BRAILS framework. <a class="reference external" href="https://simcenter.designsafe-ci.org/">SimCenter</a> <a class="reference external" href="https://nheri-simcenter.github.io/R2D-Documentation/">testbeds</a> are also a great resource showcasing how BRAILS can be used for generating inventory information at a large scale and can be coupled with other <a class="reference external" href="https://simcenter.designsafe-ci.org/">SimCenter</a> applications. Later versions of <a class="reference external" href="https://simcenter.designsafe-ci.org/research-tools/r2dtool/">R2D</a> are also planned to include BRAILS for a streamlined user experience.</p>
-<p>BRAILS also contains automated machine learning frameworks for classification, object detection, and semantic segmentation of images. These tools are equipped with a suite of features, such as automatic architecture selection, image augmentation, adaptive learning rate computations, and early termination, to provide a simple and easily operated interface for developing custom machine learning models. In their simplest forms, these frameworks only require a dataset of images, and their corresponding labels defined in a prescribed format, to train an image recognition model.</p>
+<span id="lblabout"></span><h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
+<p>SimCenter Schema is an open-source software framework hosted on the <a href="#id1"><span class="problematic" id="id2">|tool github link|</span></a>, and released under the <strong>2-Clause BSD License</strong> (see <a class="reference internal" href="license.html#lbllicense"><span class="std std-ref">Copyright and License</span></a> ). The primary objective of SimCenter Schema is to provide an easy-to-use programming interface for obtaining regional-scale building inventories from the publicly-available image, polygon, and other property data. SimCenter Schema’s capabilities, however, are not limited to image-based inventory generation for buildings. SimCenter Schema also contains simple automated utilities for image recognition tasks, which enable training custom image classification, object detection, and semantic segmentation in a few lines of code.</p>
+<p>For obtaining inventory information at a regional-scale, SimCenter Schema software framework provides an end-to-end workflow. Once the user defines the region for which the inventory information is required, the workflow runs an array of scripts to download the location/footprint information and image data and predict the requested attributes for all buildings within the defined region. All workflow components, including the pre-trained machine learning models predicting building attributes, are fully customizable. This permits creating custom workflow using SimCenter Schema tools as well as further training and testing of the machine learning models included with SimCenter Schema. This documentation contains several <span class="xref std std-ref">lbl-examples:</span> demonstrating the use of the SimCenter Schema framework. <a class="reference external" href="https://simcenter.designsafe-ci.org/">SimCenter</a> <a class="reference external" href="https://nheri-simcenter.github.io/R2D-Documentation/">testbeds</a> are also a great resource showcasing how SimCenter Schema can be used for generating inventory information at a large scale and can be coupled with other <a class="reference external" href="https://simcenter.designsafe-ci.org/">SimCenter</a> applications. Later versions of <a class="reference external" href="https://simcenter.designsafe-ci.org/research-tools/r2dtool/">R2D</a> are also planned to include SimCenter Schema for a streamlined user experience.</p>
+<p>SimCenter Schema also contains automated machine learning frameworks for classification, object detection, and semantic segmentation of images. These tools are equipped with a suite of features, such as automatic architecture selection, image augmentation, adaptive learning rate computations, and early termination, to provide a simple and easily operated interface for developing custom machine learning models. In their simplest forms, these frameworks only require a dataset of images, and their corresponding labels defined in a prescribed format, to train an image recognition model.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The pre-trained models bundled with BRAILS are extensively tested using the validation datasets reported herein. How these models generalize to new and unseen data from different geographical locations depends on how similar the building inventory for these locations are to the data used to train BRAILS models. Users are referred to <a class="reference internal" href="../technical_manual/understand.html#lbl-understand"><span class="std std-ref">Generalization</span></a> for sample findings on the generalization capabilities of some of BRAILS machine learning models. As a broader topic, generalization remains an active research area in the domain of machine learning, and users should exercise caution when using a model for extrapolation (i.e., utilizing a model for a region to which the models have had limited exposure during training).</p>
+<p>The pre-trained models bundled with SimCenter Schema are extensively tested using the validation datasets reported herein. How these models generalize to new and unseen data from different geographical locations depends on how similar the building inventory for these locations are to the data used to train SimCenter Schema models. Users are referred to <span class="xref std std-ref">lbl-understand</span> for sample findings on the generalization capabilities of some of SimCenter Schema machine learning models. As a broader topic, generalization remains an active research area in the domain of machine learning, and users should exercise caution when using a model for extrapolation (i.e., utilizing a model for a region to which the models have had limited exposure during training).</p>
 </div>
 </div>
 
@@ -209,10 +187,6 @@
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="acknowledgements.html" class="btn btn-neutral float-right" title="2. Acknowledgements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../../index.html" class="btn btn-neutral float-left" title="Building Recognition using AI at Large-Scale (BRAILS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-    </div>
 
   <hr/>
 
