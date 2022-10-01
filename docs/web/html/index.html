@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Building Recognition using AI at Large-Scale (BRAILS) &mdash; BRAILS 2.0.0 documentation</title>
+  <title>SimCenter Schema &mdash; SimCenter Schema 0.1.0 documentation</title>
   
 
   
@@ -48,7 +48,6 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. About" href="common/about/about.html" />
 <script src="https://cdn.jsdelivr.net/npm/vega@5.12.1"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.13.1"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.8.0"></script>
@@ -74,7 +73,7 @@
   <a href="#">
 
 
-  <img src="_static/SimCenter_BRAILS_logo_solo.png" class="logo" alt="Logo"/>
+  <img src="_static/SimCenterSchema_logo_solo.png" class="logo" alt="Logo"/>
 </a>
 
 
@@ -102,31 +101,14 @@
               
             
             
-              <p class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common/about/about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/acknowledgements.html">2. Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/license.html">3. Copyright and License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/cite.html">4. How to Cite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/glossary.html">5. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/abbreviations.html">6. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/releasenotes.html">7. Release Notes</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">SimCenter Schema</a><ul>
+<li><a class="reference internal" href="#contact">Contact</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/installation.html">1. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/userGuide.html">2. User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/troubleshooting.html">3. Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/examples.html">4. Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/bugs.html">5. Bugs &amp; Feature Requests</a></li>
+</li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Technical Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common/technical_manual/theory.html">1. Theory and Implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/technical_manual/vnv.html">2. Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/technical_manual/understand.html">3. Generalization</a></li>
-</ul>
-
+</div>
             
           
         </div>
@@ -140,7 +122,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">BRAILS</a>
+          <a href="#">SimCenter Schema</a>
         
       </nav>
 
@@ -173,7 +155,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Building Recognition using AI at Large-Scale (BRAILS)</li>
+      <li>SimCenter Schema</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,41 +174,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="full-tool-name-app">
-<h1>Building Recognition using AI at Large-Scale (BRAILS)<a class="headerlink" href="#full-tool-name-app" title="Permalink to this headline">¶</a></h1>
-<p><strong>Barbaros Cetiner</strong> , <strong>Yunhui Guo</strong> , <strong>Sascha Hornauer</strong> , <strong>Chaofeng Wang</strong> , <strong>Frank McKenna</strong></p>
-<p>BRAILS (Building Recognition using AI at Large-Scale) provides a set of Python modules that utilize deep learning (DL), and computer vision (CV) techniques to extract information from satellite and street level images. The BRAILS framework also provides turn-key applications allowing users to put individual modules together to determine multiple attributes in a single pass or train general-purpose image classification, object detection, or semantic segmentation models.</p>
-<p>This document covers the features and capabilities of Version 3.0 of the tool. Users are encouraged to comment on what additional features and capabilities they would like to see in future versions of the application through the <a class="reference external" href="https://simcenter-messageboard.designsafe-ci.org/smf/index.php?board=10.0">MessageBoard</a>.</p>
-<div class="toctree-wrapper compound" id="lbl-front-matter">
-<p class="caption" role="heading"><span class="caption-text">About</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common/about/about.html">1. About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/acknowledgements.html">2. Acknowledgements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/license.html">3. Copyright and License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/cite.html">4. How to Cite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/glossary.html">5. Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/abbreviations.html">6. Abbreviations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/about/releasenotes.html">7. Release Notes</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound" id="lbl-user-manual">
-<p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/installation.html">1. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/userGuide.html">2. User Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/troubleshooting.html">3. Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/examples.html">4. Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/user_manual/bugs.html">5. Bugs &amp; Feature Requests</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound" id="lbl-technical-manual">
-<p class="caption" role="heading"><span class="caption-text">Technical Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="common/technical_manual/theory.html">1. Theory and Implementation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/technical_manual/vnv.html">2. Validation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="common/technical_manual/understand.html">3. Generalization</a></li>
-</ul>
-</div>
+  <div class="section" id="full-tool-name">
+<h1>SimCenter Schema<a class="headerlink" href="#full-tool-name" title="Permalink to this headline">¶</a></h1>
+<p><strong>Barbaros Cetiner</strong> , <strong>Frank McKenna</strong></p>
+<p>SimCenter Schema describes the format for SimCenter’s Building Inventory Database. The attributes contained within the schema are the building features that were found to be essential to natural hazards los assessment studies. The way the schema is designed allows for both deterministic and probabilistic applications and is fully compatible with other SimCenter applications.</p>
 <div class="section" id="contact">
 <h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
 <p>NHERI-SimCenter <a class="reference external" href="mailto:nheri-simcenter&#37;&#52;&#48;berkeley&#46;edu">nheri-simcenter<span>&#64;</span>berkeley<span>&#46;</span>edu</a></p>
@@ -238,9 +189,6 @@
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="common/about/about.html" class="btn btn-neutral float-right" title="1. About" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
 
   <hr/>
 

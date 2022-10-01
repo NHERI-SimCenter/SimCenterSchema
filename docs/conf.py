@@ -7,35 +7,28 @@ from datetime import datetime
 
 # -- Project information -----------------------------------------------------
 
-project = 'BRAILS'
+project = 'SimCenter Schema'
 copyright = f"{str(datetime.today().year)}, The Regents of the University of California"
-author = 'Barbaros Cetiner, Yunhui Guo, Sascha Hornauer, Chaofeng Wang, Frank McKenna'
+author = 'Barbaros Cetiner, Frank McKenna'
 
 # The short X.Y version
 #version = '1.0'
 # The full version, including alpha/beta/rc tags
-release = '2.0.0'
+release = '0.1.0'
 
 rst_prolog = """
-.. |app| replace:: BRAILS
-.. |appName| replace:: BRAILS
-.. |s3harkName| replace:: SURF
-.. |surfName| replace:: SURF
-.. |brailsName| replace:: BRAILS
-.. |full tool name| replace:: Building Recognition using AI at Large-Scale
+.. |app| replace:: SimCenter Schema
+.. |appName| replace:: SimCenter Schema
+.. |brailsName| replace:: SimCenter Schema
+.. |full tool name| replace:: SimCenter Schema
 .. _MessageBoard: https://simcenter-messageboard.designsafe-ci.org/smf/index.php?board=10.0
 .. |messageBoard| replace:: `MessageBoard`_
-.. |short tool name| replace:: BRAILS
-.. |short tool id| replace:: BRAILS
-.. |tool github link| replace:: `BRAILS Github page`_
-.. _brails Github page: https://github.com/NHERI-SimCenter/BRAILS
-.. |tool version| replace:: 2.0.0
+.. |short tool name| replace:: SimCenter Schema
+.. |short tool id| replace:: SimCenter Schema
+.. |tool version| replace:: 0.1.0
 .. |SimCenter| replace:: `SimCenter`_
 .. _SimCenter: https://simcenter.designsafe-ci.org/
 
-.. |EE-UQ short name| replace:: EE-UQ app
-.. |EE-UQ app link| replace:: `EE-UQ app`_
-.. _EE-UQ app: https://simcenter.designsafe-ci.org/research-tools/ee-uq-application/
 .. |user survey link| replace:: `user survey`_
 .. _user survey: https://docs.google.com/forms/d/e/1FAIpQLSfh20kBxDmvmHgz9uFwhkospGLCeazZzL770A2GuYZ2KgBZBA/viewform?usp=sf_link
 """
