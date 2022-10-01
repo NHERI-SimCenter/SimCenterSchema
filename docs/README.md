@@ -1,6 +1,6 @@
-# BRAILS Documentation
+# SimCenter Schema Documentation
 
-This is the repository where the documentation for BRAILS is maintained. The [current documentation](https://nheri-simcenter.github.io/BRAILS-Documentation/index.html) is in reStructuredText format and is built using the Sphinx Python module.
+This is the repository where the documentation for SimCenter Schema is maintained. The current documentation is in reStructuredText format and is built using the Sphinx Python module.
 
 Contributors should follow the [style reference](https://github.com/NHERI-SimCenter/SimCenterDocumentation/blob/master/Help/docstyle.md) for guidelines on documentation formatting.
 
@@ -14,14 +14,14 @@ Contributors should follow the [style reference](https://github.com/NHERI-SimCen
 
 ## Building the Documentation
 
-Documentation files for BRAILS can be built by completing the following steps.
+Documentation files for SimCenter Schema can be built by completing the following steps.
 
 ### 1. Download this repository from GitHub
 
 For Git users, this can be done by running the following command in a terminal.
 
 ```shell
-git clone https://github.com/NHERI-SimCenter/BRAILS.git
+git clone https://github.com/NHERI-SimCenter/SimCenterSchema
 ```
 
 The remaining terminal commands should be run from the `docs/` directory of this repository, herein referred to as the *documentation root*.
@@ -64,13 +64,13 @@ Several targets may be chained at the end of a command for a particular applicat
 
 ### 4. Examples
 
-- The following command will generate **HTML** output for the BRAILS documentation in the directory `docs/web/html/`:
+- The following command will generate **HTML** output for the SimCenter Schema documentation in the directory `docs/web/html/`:
 
     ```shell
     make html
     ```
 
-- The following command will generate **latex** and **pdf** output for the BRAILS documentation in the directories `docs/web/latex/`, and `docs/web/pdf/`, respectively:
+- The following command will generate **latex** and **pdf** output for the SimCenter Schema documentation in the directories `docs/web/latex/`, and `docs/web/pdf/`, respectively:
 
     ```shell
     make latex pdf
