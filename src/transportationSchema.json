@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://simcenter.designsafe-ci.org/",
+  "title": "SimCenter Transportation Infrastructure Database",
+  "description": "Schema for SimCenter Transportation Infrastructure Database",  
+  "discriminator": {
+    "propertyName": "inf_type",
+    "mapping": {
+      "roadway": "#/definitions/roadway",
+      "hwy_tunnel": "#/definitions/hwy_tunnel"
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/definitions/roadway"
+    },
+    {
+      "$ref": "#/definitions/hwy_tunnel"
+    }
+  ],
+  "definitions": {
+    "pt_coordinates": {
+      "title": "pt_coordinates",
+      "type": "object",
+      "properties": {
+        "lat": {
+          "title": "Lat",
+          "description": "Latitude of the point in decimal degrees",
+          "type": "number"
+        },
+        "lon": {
+          "title": "Lon",
+          "description": "Longitude of the point in decimal degrees",
+          "type": "number"
+        }
+      },
+      "required": [
+        "lat",
+        "lon"
+      ]
+    },
+    "roadway": {
+      "title": "roadway",
+      "type": "object",
+      "properties": {
+        "inf_type": {
+          "title": "Inf Type",
+          "enum": [
+            "roadway"
+          ],
+          "type": "string"
+        },
+        "edge_id": {
+          "title": "Edge Id",
+          "description": "Identification string for the road edge",
+          "type": "string"
+        },
+        "length": {
+          "title": "Length",
+          "description": "Length of the road edge in ft",
+          "type": "number"
+        },
+        "start_node": {
+          "title": "Start Node",
+          "description": "Latitude and longitude of the beginning node",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/pt_coordinates"
+          }
+        },
+        "end_node": {
+          "title": "End Node",
+          "description": "Latitude and longitude of the end node",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/pt_coordinates"
+          }
+        },
+        "road_type": {
+          "title": "Road Type",
+          "description": "Type of roadway as in primary, secondary, tertiary, residential, and unclassified roadway",
+          "enum": [
+            "primary",
+            "secondary",
+            "tertiary",
+            "residential",
+            "unclassified"
+          ],
+          "type": "string"
+        },
+        "lanes": {
+          "title": "Lanes",
+          "description": "Number of traffic lanes",
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        "capacity": {
+          "title": "Capacity",
+          "description": "Traffic capacity in vehicles/hour",
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "inf_type",
+        "edge_id",
+        "length",
+        "start_node",
+        "end_node",
+        "road_type",
+        "lanes",
+        "capacity"
+      ]
+    },
+    "hwy_tunnel": {
+      "title": "hwy_tunnel",
+      "type": "object",
+      "properties": {
+        "inf_type": {
+          "title": "Inf Type",
+          "enum": [
+            "hwy_tunnel"
+          ],
+          "type": "string"
+        },
+        "location": {
+          "title": "Location",
+          "description": "Latitude and longitude of the tunnel location",
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/pt_coordinates"
+          }
+        },
+        "cons_type": {
+          "title": "Cons Type",
+          "description": "Tunnel construction type as in bored, cut-and-cover, or other",
+          "enum": [
+            "bored",
+            "cut-and-cover",
+            "unclassified"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "inf_type",
+        "location",
+        "cons_type"
+      ]
+    }
+  }
+}
